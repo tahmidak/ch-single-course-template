@@ -259,12 +259,17 @@ section.faq-section {
 }
 
 /* overview */
+.overview-sec {
+  background-color: var(--ch-primary-bg-color);
+}
+
 .content-box {
   max-height: 80vh;
   overflow: hidden;
   transition: max-height 0.5s ease-out, box-shadow 0.5s ease-out,
     padding-bottom 0.5s ease-out;
   padding-bottom: 50px;
+  background-color: white;
 }
 
 .content-box.expanded {
@@ -292,6 +297,7 @@ section.faq-section {
   );
   pointer-events: none;
   transition: opacity 0.3s ease;
+  
 }
 
 .expanded + .fade-overlay {
@@ -305,26 +311,50 @@ section.faq-section {
   padding: 5px 10px !important;
   border-radius: 0.25rem;
 }
-
 /* review */
+.review-container{
+  background:var(--ch-secondary-color);
+}
 .review-main {
   max-height: 885px;
   overflow: hidden;
 }
-
 .review-card-container {
   height: 800px;
   overflow-y: auto;
 }
 
+/* Custom Scrollbar for review-card-container */
+.review-card-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.review-card-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.review-card-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.review-card-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Firefox scrollbar */
+.review-card-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+}
 
 @media (max-width: 992px) {
-
-.review-card-container {
-  height: 300px;
-  overflow-y: auto;
-}
-.review-main {
-  margin-top: 2rem;
-}
+  .review-card-container {
+    height: 300px;
+    overflow-y: auto;
+  }
+  .review-main {
+    margin-top: 2rem;
+  }
 }
