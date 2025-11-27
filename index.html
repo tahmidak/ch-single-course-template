@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COMP-HIGH-SINGLE-COURSE</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- boots-trap css-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container"></div>
+    <header>
+      <div class="container-fluid mx-auto">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid p-0">
+            <!-- Toggle button for OFFCANVAS -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Logo -->
+            <a class="navbar-brand ch-logo m-0" href="#">
+              <img
+                src="assets/imgs/logos/CH-logo.png"
+                alt="logo"
+                width="100%"
+                height="100%"
+              />
+            </a>
+
+            <!-- OFFCANVAS MENU -->
+            <div
+              class="offcanvas offcanvas-start"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <div
+                class="offcanvas-body gap-3 flex-column-reverse justify-content-end align-items-center flex-lg-row d-flex"
+              >
+                <ul
+                  class="navbar-nav lg:ms-auto my-2 my-lg-0 navbar-nav-scroll"
+                >
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#"
+                      ><span class="nl-name">All Courses</span></a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><span class="nl-name">Hot Deals🔥</span></a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><span class="nl-name">Prime Membership</span></a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="offcanvasDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span class="nl-name">Explore</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="nl-name">Certificate</span>
+                        </a>
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="nl-name">Blog</span>
+                        </a>
+                      </li>
+                      <li><hr class="dropdown-divider" /></li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <div
+                  class="search-btn-container d-flex flex-column flex-xl-row d-lg-none d-xl-flex gap-2"
+                >
+                  <!-- Search Form -->
+                  <form
+                    class="d-flex search-inp-container overflow-hidden"
+                    role="search"
+                  >
+                    <input
+                      class="form-control border-0 rounded-pill bg-transparent text-white"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn" type="submit">
+                      <span
+                        class="d-flex justify-content-center align-items-center p-2"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-search"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242 1.106a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </form>
+
+                  <!-- login/logout btn -->
+                  <button
+                    class="log-btn btn d-flex justify-content-center align-items-center rounded-pill gap-2 px-4 text-uppercase fw-bold"
+                    type="submit"
+                  >
+                    <span
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#ffffff"
+                        style="width: 24px; height: 24px"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <g>
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path
+                              d="M20 22H4v-2a5 5 0 0 1 5-5h6a5 5 0 0 1 5 5v2zm-8-9a6 6 0 1 1 0-12 6 6 0 0 1 0 12z"
+                            ></path>
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                    login
+                  </button>
+
+                  <!-- cart btn -->
+                  <button
+                    class="cart-btn btn d-flex justify-content-center align-items-center rounded-pill gap-2 px-4 text-uppercase fw-bold"
+                    type="submit"
+                  >
+                    <span
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <svg
+                        fill="#ffffff"
+                        viewBox="0 0 256 256"
+                        id="Flat"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="width: 24px; height: 24px"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M223.87109,65.43115l-12.15722,66.86231A23.98711,23.98711,0,0,1,188.10156,152H72.13135l4.36377,24H184a24.01161,24.01161,0,1,1-22.624,16H102.624a24.00309,24.00309,0,1,1-40.85986-7.57666L34.05078,32H16a8,8,0,0,1,0-16H34.05078A15.9918,15.9918,0,0,1,49.793,29.13818L54.67676,56H216a8.00076,8.00076,0,0,1,7.87109,9.43115Z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Search icon on mobile -->
+            <button
+              class="navbar-toggler search-icon-btn"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasSearch"
+              aria-controls="offcanvasSearch"
+            >
+              <span
+                class="d-flex justify-content-center align-items-center p-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242 1.106a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </nav>
+
+        <!-- search btn -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasSearch"
+          aria-labelledby="offcanvasSearchLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasSearchLabel">Search</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <div
+              class="search-btn-container-offcanvas d-flex flex-column gap-2"
+            >
+              <!-- Search Form -->
+              <form
+                class="d-flex search-inp-container overflow-hidden"
+                role="search"
+              >
+                <input
+                  class="form-control border-0 rounded-pill bg-transparent text-white"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn" type="submit">
+                  <span
+                    class="d-flex justify-content-center align-items-center p-2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-search"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242 1.106a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </form>
+
+              <!-- login/logout btn -->
+              <button
+                class="log-btn btn d-flex justify-content-center align-items-center rounded-pill gap-2 px-4 text-uppercase fw-bold"
+                type="submit"
+              >
+                <span class="d-flex justify-content-center align-items-center">
+                  <svg
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#ffffff"
+                    style="width: 24px; height: 24px"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <g>
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path
+                          d="M20 22H4v-2a5 5 0 0 1 5-5h6a5 5 0 0 1 5 5v2zm-8-9a6 6 0 1 1 0-12 6 6 0 0 1 0 12z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                login
+              </button>
+
+              <!-- cart btn -->
+              <button
+                class="cart-btn btn d-flex justify-content-center align-items-center rounded-pill gap-2 px-4 text-uppercase fw-bold"
+                type="submit"
+              >
+                <span class="d-flex justify-content-center align-items-center">
+                  <svg
+                    fill="#ffffff"
+                    viewBox="0 0 256 256"
+                    id="Flat"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="width: 24px; height: 24px"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M223.87109,65.43115l-12.15722,66.86231A23.98711,23.98711,0,0,1,188.10156,152H72.13135l4.36377,24H184a24.01161,24.01161,0,1,1-22.624,16H102.624a24.00309,24.00309,0,1,1-40.85986-7.57666L34.05078,32H16a8,8,0,0,1,0-16H34.05078A15.9918,15.9918,0,0,1,49.793,29.13818L54.67676,56H216a8.00076,8.00076,0,0,1,7.87109,9.43115Z"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- hero sec -->
+      <section class="hero-sec">
+        <div class="container px-4 py-5">
+          <!-- <div class="row mb-2 ps-4">
+            <div class="col-12 col-lg-7 p-0">
+              <h1 class="course-name fs-2 text-center text-lg-start">
+                Autism and Emotional Regulation
+              </h1>
+            </div>
+          </div> -->
+          <div class="row flex-lg-row align-items-stretch g-5">
+            <div class="col-12 col-lg-7">
+              <div
+                class="w-100 h-100 d-flex flex-column justify-content-center align-items-start"
+              >
+                <div class="row mb-2 ps-4">
+                  <div class="col-12  p-0">
+                    <h1 class="course-name fs-2 text-center text-lg-start">
+                      Autism and Emotional Regulation
+                    </h1>
+                  </div>
+                </div>
+                <img
+                  src="assets/imgs/hero-main-img.png"
+                  class="img-fluid rounded-5"
+                  alt="hero imgs"
+                  width="100%"
+                  height="100%"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="col-lg-5 hero-info-card ps-5 rounded-5">
+              <div class="row">
+                <div class="col-10 p-0">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div
+                        class="col d-flex flex-column justify-content-center align-items-center"
+                      >
+                        <div
+                          class="price d-flex justify-content-center align-items-center gap-3"
+                        >
+                          <span
+                            class="main-price text-decoration-line-through fs-2 fw-bold light-highlight"
+                            >£425</span
+                          >
+                          <span class="discounted-price fs-2 fw-bold">£25</span>
+                        </div>
+                        <div class="price-teg-line text-black">
+                          Save Over <span class="fw-bold">70% </span>- Offer
+                          Ends soon
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div
+                        class="col d-flex flex-column justify-content-center align-items-center mt-2"
+                      >
+                        <button type="button" class="btn one-btn">
+                          Take this course
+                        </button>
+                        <span>OR</span>
+                        <button type="button" class="btn one-btn-outline">
+                          Access All Courses for Only £149
+                        </button>
+                        <span class="mbg mt-1 xs"
+                          >⟲ 14-Day Money-Back Guarantee</span
+                        >
+                      </div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col hero-usp">
+                        <ul
+                          class="w-100 d-flex flex-column gap-2 course-features-list sml px-4 my-1"
+                        >
+                          <li
+                            class="w-100 d-flex justify-content-between align-items-center"
+                          >
+                            LifeTime Access
+                            <span>🕖</span>
+                          </li>
+
+                          <li
+                            class="w-100 d-flex justify-content-between align-items-center"
+                          >
+                            LifeTime Access
+                            <span>🕖</span>
+                          </li>
+
+                          <li
+                            class="w-100 d-flex justify-content-between align-items-center"
+                          >
+                            LifeTime Access
+                            <span>🕖</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div
+                        class="col d-flex flex-column justify-content-center align-items-center mt-2"
+                      >
+                        <button type="button" class="btn pink-btn-outline">
+                          Access All Courses for Only £149
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-2 p-0 d-flex flex-column justify-content-center align-items-center"
+                >
+                  <div
+                    class="d-flex flex-column gap-2 justify-content-center align-items-center w-100"
+                  >
+                    <div class="fs-1">📷</div>
+                    <div class="fs-1">📷</div>
+                    <div class="fs-1">📷</div>
+                    <div class="fs-1">📷</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div
+                class="main-teg-line w-100 px-4 py-2 text-center fs-5 rounded-5"
+              >
+                GET ACCESS TO ALL <strong>1200+</strong> COURSES FOR ONLY
+                <strong class="primary-highlight">£149</strong>
+                .
+                <a href="" class="text-decoration-underline text-white fs-4"
+                  >Get Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- brands section -->
+      <section id="brand-sec" class="section py-5">
+        <div class="container-fluid text-center">
+          <div class="row justify-content-center align-items-center g-4">
+            <div class="brand-img pt-3 pt-md-0 col-4 col-md-2">
+              <img
+                src="assets/imgs/brand-img-1.png"
+                class="img-fluid grayscale"
+                alt="Brand 1"
+              />
+            </div>
+            <div class="brand-img pt-3 pt-md-0 col-4 col-md-2">
+              <img
+                src="assets/imgs/brand-img-2.png"
+                class="img-fluid grayscale"
+                alt="Brand 2"
+              />
+            </div>
+            <div class="brand-img pt-3 pt-md-0 col-4 col-md-2">
+              <img
+                src="assets/imgs/brand-img-3.png"
+                class="img-fluid grayscale"
+                alt="Brand 3"
+              />
+            </div>
+            <div class="brand-img pt-3 pt-md-0 col-4 col-md-2">
+              <img
+                src="assets/imgs/brand-img-4.png"
+                class="img-fluid grayscale"
+                alt="Brand 4"
+              />
+            </div>
+            <div class="brand-img pt-3 pt-md-0 col-4 col-md-2">
+              <img
+                src="assets/imgs/brand-img-5.png"
+                class="img-fluid grayscale"
+                alt="Brand 5"
+              />
+            </div>
+            <div class="brand-img pt-3 pt-md-0 col-4 col-md-2">
+              <img
+                src="assets/imgs/brand-img-6.png"
+                class="img-fluid grayscale"
+                alt="Brand 6"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- shine section -->
+      <section id="shine-sec" class="py-5 shine-sec">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Left Image -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <img
+                src="assets/imgs/shine-main-img.png"
+                alt="Team success"
+                class="img-fluid rounded"
+              />
+            </div>
+
+            <!-- Right Text Content -->
+            <div class="col-lg-6 text-center text-lg-start">
+              <p class="lead mb-4 text-muted">
+                Celebrate your team's success with official certificates upon
+                course completion. Empower them with accredited certifications
+                course completion. Empower them with accredited certifications
+                course completion. Empower them with accredited certifications
+                that boost their credentials in front of your clients.
+              </p>
+              <button type="button" class="btn one-btn">
+                Take this course
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- faq section -->
+      <section class="faq-section">
+        <div class="faq-container container py-5 py-0">
+          <div
+            class="sec-heading faq-heading row row-cols-1 justify-content-center align-items-center p-4 mb-3"
+          >
+            <h2 class="text-center fw-bold">Frequently Asked Questions</h2>
+          </div>
+          <div
+            class="faq-accordion row row-cols-1 justify-content-center align-items-center p-2 mx-2 mx-md-0"
+          >
+            <div class="accordion" id="faqAccordion">
+              <!-- Item 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse1"
+                    aria-expanded="false"
+                    aria-controls="collapse1"
+                  >
+                    What is included in the lifetime membership?
+                  </button>
+                </h2>
+                <div
+                  id="collapse1"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading1"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    The lifetime membership includes unlimited access to all
+                    courses, resources, and updates for a one-time fee.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse2"
+                    aria-expanded="false"
+                    aria-controls="collapse2"
+                  >
+                    How do I purchase the membership?
+                  </button>
+                </h2>
+                <div
+                  id="collapse2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading2"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    You can purchase the membership directly from our website
+                    using a secure checkout process.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse3"
+                    aria-expanded="false"
+                    aria-controls="collapse3"
+                  >
+                    Can I access the courses offline?
+                  </button>
+                </h2>
+                <div
+                  id="collapse3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading3"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Yes, selected courses can be downloaded for offline access
+                    through our mobile app.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse4"
+                    aria-expanded="false"
+                    aria-controls="collapse4"
+                  >
+                    Do I get updates with the membership?
+                  </button>
+                </h2>
+                <div
+                  id="collapse4"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading4"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Yes, all future updates and new courses are included at no
+                    extra cost.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse5"
+                    aria-expanded="false"
+                    aria-controls="collapse5"
+                  >
+                    Is there a refund policy?
+                  </button>
+                </h2>
+                <div
+                  id="collapse5"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading5"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Yes, we offer a 30-day money-back guarantee if you are not
+                    satisfied with the membership.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+
+    <!-- bootstrap scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

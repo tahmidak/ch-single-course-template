@@ -1,0 +1,244 @@
+:root {
+  --ch-primary-color: #ee508a;
+  --ch-secondary-color: #163b65;
+  --ch-accent-color: #f1aa17;
+  --ch-light-color: #b4b4b4;
+
+  /* backgrounds */
+  --ch-primary-bg-color: #f2f2ff;
+  --ch-secondary-bg-color: #fff5f9;
+
+  /* buttons */
+  --ch-primary-btn-color: #a2d144;
+  --ch-secondary-btn-color: #ffde59;
+}
+
+body {
+  min-width: 340px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-style: normal;
+  line-height: 1.6;
+  color: var(--ch-secondary-color);
+}
+
+.primary-highlight {
+  color: var(--ch-accent-color);
+}
+
+.light-highlight {
+  color: var(--ch-light-color);
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.xs {
+  font-size: 0.8rem;
+}
+
+.sml {
+  font-size: 1rem;
+}
+.one-btn {
+  background: var(--ch-primary-btn-color);
+  border: 3px solid var(--ch-primary-btn-color) !important;
+  padding: 0.6rem 1.2rem;
+  color: white;
+  border-radius: 200px;
+}
+
+.one-btn:hover,
+.one-btn:target,
+.one-btn:focus {
+  border: 3px solid var(--ch-primary-btn-color) !important;
+  background: var(--ch-primary-btn-color);
+  opacity: 0.85;
+}
+
+.one-btn-outline {
+  border: 3px solid var(--ch-primary-btn-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 200px;
+}
+
+.one-btn-outline:hover,
+.one-btn-outline:target,
+.one-btn-outline:focus {
+  background: var(--ch-primary-btn-color);
+  border: 3px solid var(--ch-primary-btn-color) !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 200px;
+  color: white;
+}
+
+.pink-btn-outline {
+  border: 3px solid var(--ch-primary-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 200px;
+}
+
+.pink-btn-outline:hover,
+.pink-btn-outline:target,
+.pink-btn-outline:focus {
+  background: var(--ch-primary-color);
+  border: 3px solid var(--ch-primary-color) !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 200px;
+  color: white;
+}
+/* header */
+.ch-logo {
+  width: 165px;
+  height: auto;
+}
+
+@media (min-width: 992px) {
+  .ch-logo {
+    width: 220px;
+  }
+}
+.search-inp-container {
+  background: var(--ch-light-color);
+  border: 1px solid rgb(101, 96, 96);
+  border-radius: 100rem;
+  padding: 0.2rem 0.4rem;
+}
+
+input.form-control::placeholder {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.log-btn {
+  background-color: var(--ch-primary-color);
+  border: none;
+  color: white;
+}
+
+.cart-btn {
+  background-color: var(--ch-secondary-color);
+  border: none;
+  color: white;
+}
+.dropdown-item .nl-name,
+.nav-item .nav-link .nl-name {
+  color: var(--ch-secondary-color);
+  padding-inline: 5px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--ch-light-color);
+  font-size: 1.1rem;
+}
+
+.dropdown-item .nl-name:hover,
+.nav-item .nav-link .nl-name:hover {
+  border-bottom: 3px solid var(--ch-primary-color);
+}
+
+.nav-item.active .nav-link .nl-name {
+  border-bottom: 3px solid var(--ch-primary-color);
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  padding-block: 0.2rem;
+}
+
+@media (min-width: 992px) and (max-width: 1350px) {
+  .search-btn-container {
+    display: none !important;
+  }
+}
+.search-icon-btn {
+  display: block;
+}
+
+@media (min-width: 1350px) {
+  .search-icon-btn {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1350px) {
+  .search-icon-btn {
+    display: block !important;
+  }
+}
+/* hero sec */
+.hero-sec {
+  background-color: var(--ch-primary-bg-color);
+}
+.hero-usp {
+  max-width: 390px;
+}
+.hero-info-card {
+  background: #ffffff;
+  padding: 1rem;
+}
+.main-teg-line {
+  margin-top: 20px;
+  background: var(--ch-secondary-color);
+  border-radius: 5px;
+  color: white;
+}
+
+/* shine sec */
+.shine-sec {
+  background: var(--ch-secondary-bg-color);
+}
+
+/* faq sec */
+/***** F&Q Section *****/
+section.faq-section {
+  background: var();
+}
+
+.accordion-item {
+  margin-bottom: 1rem;
+  border-radius: 40px;
+  border: none;
+  overflow: hidden;
+}
+
+.accordion-item:last-child {
+  margin-bottom: 0;
+}
+
+.accordion-button {
+  background-color: #f9f5ff;
+  color: #000;
+  box-shadow: none;
+  border-radius: 40px !important;
+  border: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #ffecf3;
+  color: var(--text-color-1);
+  box-shadow: none;
+  border-radius: 40px 40px 0 0 !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.accordion-body {
+  border: none;
+  background-color: #ffecf3;
+}
+
+.accordion-collapse {
+  border: none;
+}
+
+/***** End F&Q Section *****/
