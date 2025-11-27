@@ -264,7 +264,7 @@ section.faq-section {
 }
 
 .content-box {
-  max-height: 80vh;
+  max-height: 885px;
   overflow: hidden;
   transition: max-height 0.5s ease-out, box-shadow 0.5s ease-out,
     padding-bottom 0.5s ease-out;
@@ -311,11 +311,12 @@ section.faq-section {
   padding: 5px 10px !important;
   border-radius: 0.25rem;
 }
+
 /* review */
 .review-container{
   background:var(--ch-secondary-color);
 }
-.review-main {
+.review-main{
   max-height: 885px;
   overflow: hidden;
 }
