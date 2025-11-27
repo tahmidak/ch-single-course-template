@@ -45,6 +45,7 @@ body {
 .sml {
   font-size: 1rem;
 }
+
 .one-btn {
   background: var(--ch-primary-btn-color);
   border: 3px solid var(--ch-primary-btn-color) !important;
@@ -56,8 +57,8 @@ body {
 .one-btn:hover,
 .one-btn:target,
 .one-btn:focus {
-  border: 3px solid var(--ch-primary-btn-color) !important;
-  background: var(--ch-primary-btn-color);
+  background: white;
+  color: var(--ch-secondary-color);
   opacity: 0.85;
 }
 
@@ -92,6 +93,23 @@ body {
   border-radius: 200px;
   color: white;
 }
+
+.two-btn {
+  background: var(--ch-secondary-btn-color);
+  border: 3px dashed var(--ch-light-color) !important;
+  padding: 0.6rem 1.2rem;
+  color: white;
+  border-radius: 200px;
+}
+
+.two-btn:hover,
+.two-btn:target,
+.two-btn:focus {
+  background: white;
+  color: var(--ch-secondary-color);
+  opacity: 0.85;
+}
+
 /* header */
 .ch-logo {
   width: 165px;
@@ -196,7 +214,6 @@ input.form-control::placeholder {
 }
 
 /* faq sec */
-/***** F&Q Section *****/
 section.faq-section {
   background: var();
 }
@@ -241,4 +258,44 @@ section.faq-section {
   border: none;
 }
 
-/***** End F&Q Section *****/
+/* overview */
+.content-box {
+  max-height: 80vh;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, box-shadow 0.5s ease-out,
+    padding-bottom 0.5s ease-out;
+  padding-bottom: 50px;
+}
+
+.content-box.expanded {
+  max-height: 2000px;
+  box-shadow: inset 0 25vh 20px -20px white;
+  padding-bottom: 50px;
+}
+
+.fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30vh;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.expanded + .fade-overlay {
+  opacity: 0;
+}
+
+.show-more-btn {
+  bottom: 15px;
+  z-index: 10;
+  background-color: white;
+  padding: 5px 10px !important;
+  border-radius: 0.25rem;
+}

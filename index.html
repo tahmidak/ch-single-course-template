@@ -21,6 +21,7 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/style.css" />
+
   </head>
   <body>
     <div class="container"></div>
@@ -378,7 +379,7 @@
                 class="w-100 h-100 d-flex flex-column justify-content-center align-items-start"
               >
                 <div class="row mb-2 ps-4">
-                  <div class="col-12  p-0">
+                  <div class="col-12 p-0">
                     <h1 class="course-name fs-2 text-center text-lg-start">
                       Autism and Emotional Regulation
                     </h1>
@@ -554,6 +555,142 @@
         </div>
       </section>
 
+      <!-- overview section -->
+      <section class="overview-sec">
+        <div class="container px-4 py-5">
+          <div class="row flex-lg-row align-items-stretch g-5">
+            <div class="col-12 col-lg-9 p-3">
+              <div class="position-relative">
+                <!-- Main content box & Collapsible Content Area -->
+                <div
+                  id="contentBox"
+                  class="content-box w-100 h-100 py-4 px-4 border border-2 rounded-5 border-light-subtle"
+                >
+                  <h3 class="fs-2 fw-bold">Overview</h3>
+
+                  <div>
+                    <p>
+                      This is some text inside the box. If there is a lot of
+                      text, it should be truncated initially. We need enough
+                      text to cause an overflow to demonstrate the "show more"
+                      functionality. The box has a fixed height, so content
+                      beyond that height will be hidden until the button is
+                      clicked. You might need to add a lot more text here to see
+                      the effect, depending on your screen size and font size.
+                    </p>
+                    <p>
+                      More text to force overflow... Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad
+                      minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                      dolor in reprehenderit in voluptate velit esse cillum
+                      dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                      cupidatat non proident, sunt in culpa qui officia deserunt
+                      mollit anim id est laborum.
+                    </p>
+                    <p>
+                      This is some text inside the box. If there is a lot of
+                      text, it should be truncated initially. We need enough
+                      text to cause an overflow to demonstrate the "show more"
+                      functionality. The box has a fixed height, so content
+                      beyond that height will be hidden until the button is
+                      clicked. You might need to add a lot more text here to see
+                      the effect, depending on your screen size and font size.
+                    </p>
+                    <p>
+                      More text to force overflow... Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad
+                      minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                      dolor in reprehenderit in voluptate velit esse cillum
+                      dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                      cupidatat non proident, sunt in culpa qui officia deserunt
+                      mollit anim id est laborum.
+                    </p>
+                    <p>
+                      This is some text inside the box. If there is a lot of
+                      text, it should be truncated initially. We need enough
+                      text to cause an overflow to demonstrate the "show more"
+                      functionality. The box has a fixed height, so content
+                      beyond that height will be hidden until the button is
+                      clicked. You might need to add a lot more text here to see
+                      the effect, depending on your screen size and font size.
+                    </p>
+                    <p>
+                      More text to force overflow... Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad
+                      minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                      dolor in reprehenderit in voluptate velit esse cillum
+                      dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                      cupidatat non proident, sunt in culpa qui officia deserunt
+                      mollit anim id est laborum.
+                    </p>
+                    <p>
+                      This is some text inside the box. If there is a lot of
+                      text, it should be truncated initially. We need enough
+                      text to cause an overflow to demonstrate the "show more"
+                      functionality. The box has a fixed height, so content
+                      beyond that height will be hidden until the button is
+                      clicked. You might need to add a lot more text here to see
+                      the effect, depending on your screen size and font size.
+                    </p>
+                    <p>
+                      More text to force overflow... Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad
+                      minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                      dolor in reprehenderit in voluptate velit esse cillum
+                      dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                      cupidatat non proident, sunt in culpa qui officia deserunt
+                      mollit anim id est laborum.
+                    </p>
+                  </div>
+                </div>
+                <!-- Fade overlay ONLY visible when truncated -->
+                <div id="fadeOverlay" class="fade-overlay"></div>
+
+                <!-- Show More Button -->
+                <button
+                  id="showMoreBtn"
+                  class="btn btn-link p-0 position-absolute start-50 translate-middle-x show-more-btn"
+                  onclick="toggleContent()"
+                >
+                  Show More
+                </button>
+
+                <script>
+                  function toggleContent() {
+                    const contentBox = document.getElementById("contentBox");
+                    const button = document.getElementById("showMoreBtn");
+                    const fadeOverlay = document.getElementById("fadeOverlay");
+
+                    // Toggle the 'expanded' class on the content box
+                    contentBox.classList.toggle("expanded");
+
+                    // Change the button text based on the state
+                    if (contentBox.classList.contains("expanded")) {
+                      button.textContent = "Show Less";
+                      // Position the button correctly for 'Show Less' inside the bottom padding area
+                      button.style.bottom = "15px";
+                    } else {
+                      button.textContent = "Show More";
+                      // Position the button correctly for 'Show More' (default is 15px bottom)
+                      button.style.bottom = "15px";
+                    }
+                  }
+                </script>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3">hello</div>
+          </div>
+        </div>
+      </section>
+
       <!-- shine section -->
       <section id="shine-sec" class="py-5 shine-sec">
         <div class="container">
@@ -576,7 +713,7 @@
                 course completion. Empower them with accredited certifications
                 that boost their credentials in front of your clients.
               </p>
-              <button type="button" class="btn one-btn">
+              <button type="button" class="btn two-btn">
                 Take this course
               </button>
             </div>
