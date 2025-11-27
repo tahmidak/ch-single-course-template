@@ -324,5 +324,7 @@ section.faq-section {
   height: 300px;
   overflow-y: auto;
 }
-
+.review-main {
+  margin-top: 2rem;
+}
 }
